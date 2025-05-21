@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sabin Panthi | Web Developer</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    body {
+      background: linear-gradient(to bottom right, #f0f4ff, #ffffff);
+      color: #222;
+      line-height: 1.6;
+    }
+
+    header {
+      background: #1f2937;
+      color: white;
+      padding: 2rem 1rem;
+      text-align: center;
+      position: relative;
+    }
+
+    header h1 {
+      font-size: 2.5rem;
+    }
+
+    header p {
+      font-size: 1.2rem;
+      margin: 0.5rem 0 1rem;
+    }
+
+    nav a {
+      color: #fcd34d;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: #38bdf8;
+    }
+
+    section {
+      padding: 3rem 1rem;
+      max-width: 900px;
+      margin: auto;
+    }
+
+    section h2 {
+      text-align: center;
+      margin-bottom: 2rem;
+      font-size: 2rem;
+      color: #1f2937;
+    }
+
+    .project-card {
+      background: white;
+      border: 1px solid #ddd;
+      padding: 1.5rem;
+      margin-bottom: 1.5rem;
+      border-radius: 10px;
+      box-shadow: 0 5px 10px rgba(0, 0, 0, 0.05);
+      transition: transform 0.3s ease;
+    }
+
+    .project-card:hover {
+      transform: translateY(-5px);
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+    }
+
+    input, textarea {
+      margin-bottom: 1rem;
+      padding: 0.75rem;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+      font-size: 1rem;
+    }
+
+    button {
+      padding: 0.8rem;
+      background: #1f2937;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 1rem;
+      transition: background 0.3s;
+    }
+
+    button:hover {
+      background: #374151;
+    }
+
+    footer {
+      background: #1f2937;
+      color: white;
+      text-align: center;
+      padding: 1.5rem 1rem;
+      position: relative;
+    }
+
+    /* Floating Social Icons */
+    .social-icons {
+      position: fixed;
+      top: 50%;
+      left: 15px;
+      transform: translateY(-50%);
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      z-index: 999;
+    }
+
+    .social-icons a {
+      display: inline-block;
+      background: #1f2937;
+      color: white;
+      width: 40px;
+      height: 40px;
+      line-height: 40px;
+      text-align: center;
+      border-radius: 50%;
+      font-size: 1.2rem;
+      transition: transform 0.3s, background 0.3s;
+    }
+
+    .social-icons a:hover {
+      background: #38bdf8;
+      transform: scale(1.1);
+    }
+
+    /* Responsive */
+    @media (max-width: 600px) {
+      nav a {
+        display: block;
+        margin: 10px 0;
+      }
+
+      .social-icons {
+        left: auto;
+        right: 15px;
+      }
+    }
+  </style>
+  <script src="https://kit.fontawesome.com/a2e5f1f0a7.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  <header>
+    <h1>Sabin Panthi</h1>
+    <p>Creative Web Developer | Frontend Specialist</p>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <div class="social-icons">
+    <a href="https://github.com/" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+    <a href="https://linkedin.com/" target="_blank" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+    <a href="mailto:your@email.com" title="Email"><i class="fas fa-envelope"></i></a>
+  </div>
+
+  <section id="about">
+    <h2>About Me</h2>
+    <p>Hello! I'm Sabin Panthi, a passionate web developer with a love for creating modern, responsive, and user-friendly websites. With expertise in HTML, CSS, JavaScript, and UI/UX, I help businesses and individuals bring their digital visions to life.</p>
+  </section>
+
+  <section id="projects">
+    <h2>Projects</h2>
+    <div class="project-card">
+      <h3>Modern Portfolio</h3>
+      <p>A stylish personal portfolio website with interactive UI and responsive design.</p>
+    </div>
+    <div class="project-card">
+      <h3>Product Landing Page</h3>
+      <p>A clean, high-converting landing page built with semantic HTML and modern CSS.</p>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>Contact</h2>
+    <form id="contactForm">
+      <input type="text" placeholder="Your Name" required />
+      <input type="email" placeholder="Your Email" required />
+      <textarea placeholder="Your Message" rows="5" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+    <p id="messageStatus"></p>
+  </section>
+
+  <footer>
+    <p>© 2025 Sabin Panthi. All rights reserved.</p>
+  </footer>
+
+  <script>
+    document.getElementById('contactForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      document.getElementById('messageStatus').textContent = "Thanks! I'll get back to you soon.";
+      this.reset();
+    });
+  </script>
+</body>
+</html>
